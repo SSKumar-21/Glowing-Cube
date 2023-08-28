@@ -1,0 +1,116 @@
+body{
+    background-color:black;
+    height: 100vh;
+    margin: 0;
+    perspective: 800px;
+}
+
+.glowc{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height:    100vh;
+}
+
+.blue{
+    width: 200px;
+    height: 200px;
+    transform-style:preserve-3d ;
+    animation: spin 6s linear infinite;
+    margin: 50px;
+}
+
+
+.face-blue{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: blue;
+    border: 1px solid blue;
+    box-shadow: 0 0 200px blue;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+
+.red{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    transform-style:preserve-3d ;
+    animation: spin 6s linear infinite;
+}
+
+.face-red{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: red;
+    border: 1px solid red;
+    box-shadow: 0 0 200px red;;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+
+.green{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    transform-style:preserve-3d ;
+    animation: spin 6s linear infinite;
+}
+
+.face-green{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color:rgba(8, 254, 0, 0.8);
+    border: 1px solid rgba(8, 254, 0, 0.8);
+    box-shadow: 0 0 200px rgba(8, 254, 0, 0.8);
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+
+.yellow{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    transform-style:preserve-3d ;
+    animation: spin 6s linear infinite;
+}
+
+.face-yellow{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color:yellow;
+    border: 1px solid yellow;
+    box-shadow: 0 0 200px yellow;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+
+.front{ transform: translateZ(100px);}
+
+.back{ transform: translateZ(-100px) rotateY(180deg);}
+
+.top{ transform:rotateX(90deg) translateZ(100px);}
+
+.bottom{ transform:rotateX(-90deg) translateZ(100px);}
+
+.left{ transform:rotateY(-90deg) translateZ(100px) ;}
+
+.right{ transform: rotateY(90deg) translateZ(100px);}
+
+@keyframes spin {
+    0%{
+        transform: rotateX(0) rotateY(0);
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
